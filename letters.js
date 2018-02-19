@@ -1,15 +1,19 @@
-var Letter = function(letter){
+var Letter = function(letter, guess){
 
   this.letter = letter;
 
   this.guessed = false;
 
-  this.display = function(letter){
+};
+
+  Letter.prototype.display = function(){
   if(this.guessed){
-    return ' ' + this.letter.toUpper() + ' ';
-  } else{
+    return ' ' + this.letter.toUpperCase() + ' ';
+  }
+  else
+  {
     return '_';
   }
   };
-};
+
 module.exports = Letter;
